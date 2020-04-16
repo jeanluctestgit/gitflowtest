@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positionnement Css</title>
+
+	<style>
+		.parent{
+		  position: relative;
+          background-color: grey;
+          height: 400px;
+		}
+
+		.premier{
+		  position: absolute;
+          background-color: #5665ef;
+          width: 200px;
+          height: 200px;
+          top : 100px;
+          left: 80%;
+		}
+
+		.yeux{
+			position: relative;
+		}
+
+		.o_gauche{
+			position: absolute;
+			background-color: black;
+			top : 30px;
+			left:50px;
+			width: 10px;
+			height: 10px;
+		}
+
+		.o_droit{
+            position: absolute;
+            background-color: black;
+            top : 30px;
+            left:130px;
+            width: 10px;
+            height: 10px;
+		}
+
+		.nez{
+			position: relative;
+			top : 50px;
+			left : 90px;
+			background-color: black;
+			width: 10px;
+			height: 40px;
+		}
+
+		.bouche{
+			position: relative;
+			top : 70px;
+			left : 55px;
+			background-color: black;
+			width: 90px;
+			height: 10px;
+		}
+
+		
+
+		.second{
+          background-color: #ef5665;
+		}
+
+		.troisieme{
+          background-color: #56ef65;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	Parent
+	<div class="premier">UN
+		<div class="yeux">
+			<div class="o_gauche"></div>
+			<div class="o_droit"></div>
+		</div>
+		<div class="nez">			
+		</div>
+		<div class="bouche">
+			
+		</div>
+	</div>
+	<div class="second">DEUX</div>
+	<div class="troisieme">TROIS</div>
+</div>
+</body>
+</html>
