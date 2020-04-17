@@ -5,23 +5,138 @@
 	<style>
 		.parent { 
 display: grid; 
-grid-template-columns: repeat(3, 1fr); 
-
+grid-template-columns: repeat(6, 1fr); 
 grid-column-gap: 1em; 
-grid-auto-rows : minmax(100px,auto);
+grid-row-gap:1em;
+grid-auto-rows : minmax(20px,auto);
 } 
-.div1 { background-color: #981111;} 
-.div2 { background-color: #119811;} 
-.div3 { background-color: #111198;} 
+
+.column{
+	background-color: #119811;
+}
+
+.header { 
+	grid-column : 1 / 7;
+	height: 40px;
+    position: sticky;
+    top:35px;
+    background-color: #bbb;	
+}
+
+.logo{
+	grid-column : 1 / 4;
+	height: 120vh;
+}
+.inscription{
+	grid-column : 4 / 7;
+	height: 120vh;
+	display: grid;
+	grid-template-columns : repeat(11, 1fr);
+	grid-template-rows : repeat(11, 1fr);
+	grid-column-gap: 1px; 
+    grid-row-gap:1px;
+    grid-auto-rows : minmax(20px,auto);
+}
+
+.o_gauche{
+	grid-column : 3 / 4;
+	grid-row : 3 / 4;
+	background-color: black;
+
+}
+
+.o_droit{
+	grid-column : 9 / 10;
+	grid-row : 3 / 4;
+	background-color: black;
+}
+
+.nez{
+    grid-column : 6 / 6;
+	grid-row : 4 / 6;
+	background-color: black;	
+}
+
+.bouche{
+    grid-column : 5 / 8;
+	grid-row : 7 / 8;
+	background-color: black;	
+}
+
+.bouche_gauche{
+    grid-column : 4 / 5;
+	grid-row : 6 / 7;
+	background-color: black;	
+}
+
+.bouche_droit{
+    grid-column : 8 / 9;
+	grid-row : 6 / 7;
+	background-color: black;	
+}
+ 
+
+.nested{
+	background-color: #eee;
+	grid-column : 1 / 7;
+	display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+grid-column-gap: 1em; 
+grid-row-gap:1em;
+grid-auto-rows : minmax(20px,auto);	
+}
+
+.footer { 
+	grid-column : 1 / 7;
+	height: 40px;
+}
+
+nav {
+	background-color: #eee;
+	position: sticky;
+	width : 100%;
+	top :0;
+	z-index: 0;
+}
+
+nav ul{
+	text-align: center;
+}
+
+nav ul li {
+	padding: 10px;
+	display: inline-block;
+}
 
 	</style>
 </head>
 <body>
+	<h1>Bienvenue</h1>
+<nav>
+	<ul>
+		<li><a href="">item 1</a></li>
+		<li><a href="">item 2</a></li>
+		<li><a href="">item 3</a></li>
+		<li><a href="">item 4</a></li>
+		<li><a href="">item 5</a></li>
+	</ul>
+</nav>
+<div class="parent">
+<div class="nested">
+  <div class="column header"></div>
+  <div class="column logo"></div>
+  <div class="column inscription">
+  	<div class="o_gauche"></div>
+    <div class="o_droit"></div>
+    <div class="nez"></div>
+    <div class="bouche_gauche"></div>
+    <div class="bouche"></div>
+    <div class="bouche_droit"></div>
+  </div>
+  <div class="column footer"></div>  	
+</div> 
 
-    <div class="parent"> 
-<div class="div1"> </div> 
-<div class="div2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, labore non maiores dolores, tempore quasi iusto. Voluptatem quidem tempora assumenda nemo accusantium quasi, maxime porro reprehenderit, quibusdam minima aliquid, impedit eum nobis recusandae ad repellat facere vero! Facilis cumque, sed obcaecati ratione rem fugiat eos molestiae corrupti dicta? Ullam nisi nemo debitis, veritatis porro similique exercitationem consequuntur! Expedita ullam cum perferendis eveniet impedit dolorum inventore architecto voluptate accusantium repellendus officia laboriosam, maxime vero sit delectus minus unde optio nemo, sint et ratione explicabo tempore. Dicta accusamus alias ipsa eligendi, delectus ab vitae commodi? Itaque necessitatibus natus hic maxime distinctio earum.</div> 
-<div class="div3"> </div> 
+
 </div> 
 
 </body>
